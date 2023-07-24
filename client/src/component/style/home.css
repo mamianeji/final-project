@@ -1,0 +1,352 @@
+.hh {
+	width:100%;
+	padding-right:15px;
+	padding-left:15px;
+	margin-right:auto;
+	margin-left:auto;
+	/*max-width:800px*/
+}
+/* Basic appearance stuff ends here */
+
+/* Parallax Horizontal Scroller - by Bree Dulmage, 2020 */
+#proparallax {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	min-height: 37.5rem;
+	box-shadow: 0px 8px 10px 8px grey;
+}	
+
+#proparallax img {
+	position: absolute;
+	min-width: 100rem;
+	/* height: 37.5rem; */
+	overflow: hidden;
+	object-fit: cover;
+}
+
+@keyframes parallax_one { /* controls img.one movement */
+	0% { /* .imageloaded */
+		height: 37.5rem;
+		width: 50rem;
+		left: 0rem;
+		opacity: 1;
+	}
+	/* .imagehold runs from 0 to 27.77% */
+	27.77% { /* .imageloaded */
+		width: 50rem;
+		left: 0rem;
+	}
+	27.78% { /* .imagepreunload */
+		width: 50rem;
+		left: 0rem;
+		right: 50rem;
+	}
+	33.33% { /* .imageunloaded */
+		height: 37.5rem;
+		width: 0rem;
+		left: 0rem;
+		right: 0rem;
+		opacity: 1;
+	}
+	33.34% { /* imageoff */
+		opacity: 0;	
+	}
+	94.43% { /* .imageon */
+		left: 0rem;
+		opacity: 0;
+	}
+	94.44% { /* .imageinitial */
+		height: 37.5rem;
+		width: 0rem;
+		left: 50rem;
+		opacity: 1;
+	}
+	100% { /* .imageloaded */
+		width: 50rem;
+		left: 0rem;
+		opacity: 1;		
+	}
+}
+
+@keyframes parallax_two { /* controls img.two movement */
+	0% { /* .imageoff */
+		opacity: 0;
+	}
+	27.77% { /* .imageon */
+		left: 0rem;
+		opacity: 0;
+	}
+	27.78% { /* .imageinitial */
+		width: 0rem;
+		height: 37.5rem;
+		left: 50rem;
+		opacity: 1;
+	}
+	33.33% { /* .imageloaded */
+		width: 50rem;
+		left: 0rem;
+	}
+	/* .imagehold runs from 33.34% - 61.10% */
+	61.10%{ /* .imageloaded */
+		width: 50rem;
+		left: 0rem;
+	}
+	61.11% { /* .imagepreunload */
+		width: 50rem;
+		left: 0rem;
+		right: 50rem;
+	}
+	66.67% { /* .imageunloaded */
+		width: 0rem;
+		right: 0rem;
+		left: 0rem;
+		height: 37.5rem;
+		opacity: 1;
+	}
+	66.68% { /* .imageoff */
+		opacity: 0;
+	}
+	100% { /* .imageoff */
+		opacity: 0;
+	}
+}
+
+@keyframes parallax_three { /* controls img.three movement */
+	0% { /* .imageoff */
+		opacity: 0;
+	}
+	61.10%{ /* .imageon */
+		opacity: 0;
+	}
+	61.11% { /* .imageinitial */
+		width: 0rem;
+		height: 37.5rem;
+		left: 50rem;
+		opacity: 1;		
+	}
+	66.67% { /* .imageloaded */
+		width: 50rem;
+		left: 0rem;
+	}
+	/* .imagehold runs from 66.67% - 94.43% */
+	94.43% { /* .imageloaded */
+		width: 50rem;
+		left: 0rem;
+	}
+	94.44% { /* .imagepreunload */
+		width: 50rem;
+		left: 0rem;
+		right: 50rem;
+	}
+	100% { /* imageunloaded */
+		width: 0rem;
+		right: 0rem;
+		left: 0rem;
+		height: 37.5rem;
+		opacity: 1;
+	}
+}
+
+#proparallax img.one{
+	animation-name: parallax_one; /* controls img.one movement */
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 18s;
+	animation-direction: forwards;
+	object-fit: cover;
+}
+
+#proparallax img.two {
+	animation-name: parallax_two; /* controls img.two movement */
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 18s;
+	animation-direction: forwards;
+	object-fit: cover;
+}
+
+
+#proparallax img.three {
+	animation-name: parallax_three; /* controls img.three movement */
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 18s;
+	animation-direction: forwards;
+	object-fit: cover;
+}
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Staatliches&display=swap");
+h1 {
+  color: #555555;
+  font-family: "Staatliches", cursive;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+h2 {
+  color: #555555;
+  font-family: "Staatliches", cursive;
+  font-size: 2rem;
+  float: right;
+  margin-top: 0;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+h3 {
+  color: #dda82a;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+hr {
+  border-left: 2px solid #dda82a;
+  height: 40px;
+  position: absolute;
+  margin-left: 100px;
+}
+.togther {
+  margin-right: 50px;
+}
+.para {
+  width: 40%;
+
+  margin: 0 auto;
+}
+.para p {
+  font-family: "Lato", sans-serif;
+  color: #777;
+  line-height: 1.6;
+  text-align: center;
+}
+.para p span {
+  color: #c7a654;
+  font-weight: bolder;
+}
+svg {
+  width: 50%;
+  filter: invert(88%) sepia(12%) saturate(4698%) hue-rotate(339deg)
+    brightness(92%) contrast(87%);
+}
+.cwarats {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.defaultCarta {
+  width: 30%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.defaultCarta > * {
+  margin:13px;
+  text-align: center;
+}
+.defaultCarta h6 {
+  font-size: 1.25em;
+  font-family: "Staatliches", sans-serif;
+  color: #555;
+}
+.defaultCarta p {
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+  color: #777;
+}
+
+/* parti thaniya */
+
+.foot button img {
+  filter: invert(88%) sepia(12%) saturate(4698%) hue-rotate(339deg)
+    brightness(92%) contrast(87%);
+  margin-right: 10px;
+}
+.foot p {
+  color: rgb(76, 73, 73);
+  font-family: "Staatliches", sans-serif;
+  line-height: 1.05;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  opacity: 0.8;
+  margin: 0;
+}
+.foot h5 {
+  color: rgb(240, 54, 144);
+  font-family: "Staatliches", sans-serif;
+  font-size: 3em;
+  line-height: 1.3;
+  margin-top: 0;
+}
+.foot button {
+  color: rgb(240, 54, 144);
+  border: 2px solid currentColor;
+  background-color: transparent;
+  border-radius: 30px;
+  padding: 5px 30px 5px 30px;
+  line-height: 2.19em;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  font-weight: bolder;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}
+.foot button:hover {
+  color: #fff;
+
+  background-color: rgb(240, 54, 144);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+.foot button:hover>img {
+  filter: invert(99%) sepia(79%) saturate(0%) hue-rotate(75deg) brightness(116%)
+    contrast(100%);
+}
+
+.about-section .counter {
+	padding: 22px 20px;
+	background: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+}
+
+.about-section .counter .count-data {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.about-section .counter .count {
+	font-weight: 700;
+	color: #20247b;
+	margin: 0 0 5px;
+}
+
+.about-section .counter p {
+	font-weight: 600;
+	margin: 0;
+}
+
+mark {
+	background-image: linear-gradient(rgba(252, 83, 86, 0.6), rgba(252, 83, 86, 0.6));
+	background-size: 100% 3px;
+	background-repeat: no-repeat;
+	background-position: 0 bottom;
+	background-color: transparent;
+	padding: 0;
+	color: currentColor;
+}
+
+.theme-color {
+	color: #fc5356;
+}
+
+.dark-color {
+	color: #20247b;
+}
